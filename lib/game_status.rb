@@ -9,8 +9,8 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8
 def won?(board)
   WIN_COMBINATIONS.detect do |arr|
     board[arr[0]] == board[arr[1]] && board[arr[1]] == board[arr[2]] &&
-    position_taken(board, arr[0])
-  end 
+    position_taken?(board, arr[0])
+  end
 end
 
 def full?(board)
